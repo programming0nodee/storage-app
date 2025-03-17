@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Storage app</title>
+
+        <meta name="application-name" content="Storage app">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-startup-image" href="icon/manifest512.png">
+        <meta name="apple-mobile-web-app-title" content="Storage app">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="${app.manifest.theme_color}">
+
+        <link rel="icon" href="icon/favicon.ico" sizes="16x16" type="icon/x-icon">
+        <link rel="icon" href="icon/favicon32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="icon/favicon64.png" sizes="64x64" type="image/png">
+        <link rel="icon" href="icon/favicon144.png" sizes="144x144" type="image/png">
+
+        <link rel="icon" href="icon/icon.svg" sizes="any" type="image/svg+xml">
+        <link rel="mask-icon" href="icon/monochrome.svg" sizes="any" type="image/svg+xml">
+
+        <link rel="apple-touch-icon" href="/icon/apple120.png" sizes="120x120" type="image/png">
+        <link rel="apple-touch-icon" href="/icon/apple152.png" sizes="152x152" type="image/png">
+        <link rel="apple-touch-icon" href="/icon/apple167.png" sizes="167x167" type="image/png">
+        <link rel="apple-touch-icon" href="/icon/apple180.png" sizes="180x180" type="image/png">
+        <link rel="apple-touch-icon" href="/icon/apple1024.png" sizes="1024x1024" type="image/png">
+
+        <link rel="manifest" href="/manifest.min.webmanifest" type="text/json">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/home.css">
+        <style>body>*:not(app-root){display:none}</style>
+    </head>
+    <body>
+        <script>
+            loadWebWorker(z4875);
+            loadWebAssembly(z8745);
+            loadIframe(z8979);
+            loadIframe(z9837);
+        </script>
+        <iframe src="/iframe/utils"></iframe>
+        <iframe src="/iframe/analytics"></iframe>
+        <app-root></app-root>
+    </body>
+</html>
