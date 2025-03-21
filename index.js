@@ -97,8 +97,8 @@ app.get('/icon/:format/:style/:size?', async (req, res) => {
     if(!size) size = '16x16';
     if(size && !size.includes('x')) size = `${size}x${size}`;
     if(size) size = size.split('x').map(Number);
-    if(size[0] < 16 || size[1] < 16) res.redirect(`/icon/${format}/${size}/16`);
-    if(size[0] > 1024 || size[1] > 1024) res.redirect(`/icon/${format}/${size}/1024`);
+    if(size[0] < 16 || size[1] < 16) res.redirect(`/icon/${format}/${style}/16`);
+    if(size[0] > 1024 || size[1] > 1024) res.redirect(`/icon/${format}/${style}/1024`);
     if(size && (isNaN(size[0]) || isNaN(size[1]))) return error(res, 400, 'Niewłaściwy rozmiar');
 
     try{
