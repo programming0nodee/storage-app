@@ -1,6 +1,6 @@
 const express = require('express');
 const fs = require('fs');
-const WebSocket = require('ws');
+// const WebSocket = require('ws');
 const path = require('path');
 const sharp = require('sharp');
 const compression = require('compression');
@@ -36,17 +36,15 @@ const Codes = {
 };
 
 
-const wss = new WebSocket.Server({ noServer: true });
+// const wss = new WebSocket.Server({ noServer: true });
 
-wss.on('connection', (ws) => {
-    console.log('Client connected to WebSocket Server A');
-
-    ws.on('message', (message) => {
-        console.log(`Received from client: ${message}`);
-        
-        ws.send('');
-    });
-});
+// wss.on('connection', (ws) => {
+//     console.log('Client connected to WebSocket Server A');
+//     ws.on('message', (message) => {
+//         console.log(`Received from client: ${message}`);    
+//         ws.send('');
+//     });
+// });
 
 
 app.use(compression());
@@ -162,8 +160,8 @@ app.server = app.listen(PORT, () => {
     console.log(`HTTP server is running on port ${PORT}`);
 });
 
-app.server.on('upgrade', (request, socket, head) => {
-    wss.handleUpgrade(request, socket, head, (ws) => {
-        wss.emit('connection', ws, request);
-    });
-});
+// app.server.on('upgrade', (request, socket, head) => {
+//     wss.handleUpgrade(request, socket, head, (ws) => {
+//         wss.emit('connection', ws, request);
+//     });
+// });
