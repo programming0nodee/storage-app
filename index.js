@@ -63,9 +63,9 @@ app.get('/', (_, res) => {
 });
 
 app.get('/healthcheck', (req, res) => {
+  let date = new Date().toUTCString();
   res.set({
-    'Content-Type': 'text/plain;charset=utf-8',
-    'Date-Request': req.headers['date-request'],
+    'Content-Type': 'text/plain; charset=UTF-8',
     'Date-Response': date,
     'Cache-Control': 'no-cache'
   }).status(200).send('OK');
